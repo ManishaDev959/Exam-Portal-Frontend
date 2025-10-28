@@ -84,8 +84,7 @@ export default function UserDashboard() {
           })
         )}
       </ul>
-
-      {/* ✅ Apply Form Modal */}
+      
       {selectedExam && (
         <ApplyExamForm exam={selectedExam} onClose={() => setSelectedExam(null)} />
       )}

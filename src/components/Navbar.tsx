@@ -11,7 +11,7 @@ export default function Navbar() {
     const token = localStorage.getItem("token");
     const userRole = localStorage.getItem("role");
 
-    if (userRole) {
+    if (token && userRole) {
       setIsAuthenticated(true);
       setRole(userRole);
     } else {

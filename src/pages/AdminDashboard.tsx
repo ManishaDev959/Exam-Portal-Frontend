@@ -50,7 +50,7 @@ export default function AdminDashboard() {
       fetchExams();
     } catch (err) {
       console.error(err);
-      alert("Failed to create exam. Check console for details.");
+      alert("Failed to create exam");
     }
   };
 
@@ -111,9 +111,6 @@ export default function AdminDashboard() {
     if (!res.ok) throw new Error("Failed to fetch submissions");
 
     const data = await res.json();
-    console.log("📦 Submissions response:", data);
-
-    // ✅ Extract only the applicants array
     setSubmissions(data.applicants || []);
     setShowModal(true);
   } catch (err) {
@@ -249,7 +246,6 @@ export default function AdminDashboard() {
         </div>
       )}
 
-      {/* ✅ Single Modal for Viewing Submissions */}
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-40 flex justify-center items-center z-50">
           <div className="bg-white p-6 rounded-2xl shadow-lg w-[500px]">

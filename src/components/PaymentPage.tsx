@@ -10,9 +10,8 @@ import {
   useElements,
 } from "@stripe/react-stripe-js";
 
-const stripePromise = loadStripe("pk_test_YourPublicTestKeyHere");
+const stripePromise = loadStripe("pk_test_51SN5mZ1NitsVjD0fiyNBjRTEzKXqEy1DYrE5Q9YPBRzlnpFacNh6mao45KkEDu06dZ1PXhKp1Qoe1lc7JwHPWQz700r9uDfWXP");
 
-// --- Inner Checkout Form ---
 function CheckoutForm({
   examFormId,
   examSubject,
@@ -40,9 +39,7 @@ function CheckoutForm({
       console.log("Simulating payment for exam", examFormId);
       await new Promise((r) => setTimeout(r, 1500));
 
-      alert("✅ Payment successful!");
 
-      // ✅ Mark as applied in backend
       await fetch(`http://localhost:8000/api/Exam/apply/${examFormId}`, {
         method: "POST",
         headers: {
@@ -94,13 +91,12 @@ function CheckoutForm({
   );
 }
 
-// --- Main PaymentPage component ---
 export default function PaymentPage() {
   const { examFormId } = useParams<{ examFormId: string }>();
   const location = useLocation();
   const navigate = useNavigate();
 
-  // ✅ Data passed from previous page via state
+
   const { examSubject, fee } = location.state || {
     examSubject: "Unknown Subject",
     fee: 0,

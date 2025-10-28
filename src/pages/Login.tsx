@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-// import axiosClient from "../api/axiosClient";
+
 import axios from "axios";
 
 const Login = () => {
@@ -24,14 +24,12 @@ const Login = () => {
     setLoading(true);
 
     try {
-      debugger
       const response = await axios.post(
         "http://localhost:8000/api/Auth/login",
         formData,
         { headers: { "Content-Type": "application/json" } }
       );
 
-      debugger
       const { token, role } = response.data;
 
       localStorage.setItem("token", token);
@@ -41,7 +39,7 @@ const Login = () => {
       if (role === "Admin") navigate("/admin");
       else navigate("/dashboard");
     } catch (err: any) {
-      setError(err.response?.data?.message || "Invalid email or password.");
+      setError(err.response?.data?.message || "Invalid credentials");
     } finally {
       setLoading(false);
     }

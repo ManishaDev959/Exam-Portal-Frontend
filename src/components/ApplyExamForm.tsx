@@ -32,13 +32,6 @@ export default function ApplyExamForm({ exam, onClose }: ApplyExamFormProps) {
       return;
     }
 
-    // localStorage.setItem("examApplication", JSON.stringify({
-    //   ...formData,
-    //   examFormId: exam.examFormId,
-    //   subjects: exam.subjects,
-    //   fee: exam.fee,
-    // }));
-
     navigate(`/payment/${exam.examFormId}`, {
       state: { examSubject: exam.subjects, fee: exam.fee },
     });
