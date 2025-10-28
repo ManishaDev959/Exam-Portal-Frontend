@@ -1,0 +1,48 @@
+# ============================================================
+# ✅ React + Tailwind + npm standard .gitignore
+# ============================================================
+
+# Dependencies
+/node_modules/
+
+# Build outputs
+/build/
+/dist/
+
+# Local environment files
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# VS Code and IDE folders
+.vscode/
+.idea/
+
+# Testing
+/coverage/
+
+# Optional cache folders
+/.parcel-cache/
+/.next/
+/out/
+
+# Misc
+*.pem
+*.key
+
+# Lock files (since you're using npm, keep only package-lock.json)
+# If you ever switch to Yarn or PNPM, remove the other lock files
+yarn.lock
+pnpm-lock.yaml
