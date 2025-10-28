@@ -1,48 +1,71 @@
 # ============================================================
-# ✅ React + Tailwind + npm standard .gitignore
+# ✅ ASP.NET Core / .NET Backend Standard .gitignore
 # ============================================================
 
-# Dependencies
-/node_modules/
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+[Tt]emp/
+[Tt]mp/
 
-# Build outputs
-/build/
-/dist/
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
 
-# Local environment files
-.env
-.env.local
-.env.development
-.env.production
-.env.test
-
-# Log files
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# OS / Editor files
-.DS_Store
-Thumbs.db
-desktop.ini
-
-# VS Code and IDE folders
-.vscode/
+# Rider / JetBrains
 .idea/
 
-# Testing
-/coverage/
+# VS Code settings
+.vscode/
 
-# Optional cache folders
-/.parcel-cache/
-/.next/
-/out/
+# Publish outputs
+publish/
+out/
+AppPackages/
+BundleArtifacts/
+
+# Debug & Crash dumps
+*.pdb
+*.mdb
+*.opendb
+*.dmp
+
+# Backup & Cache
+*.bak
+*.tmp
+*.temp
+*.cache
+*.dbmdl
+
+# Environment & Secret configs
+.env
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.json
+
+# NuGet packages
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+.nuget/
+project.lock.json
+
+# Ignore frontend or non-.NET stuff
+node_modules/
+package*.json
+tailwind.config.js
+postcss.config.js
+tsconfig.json
+src/
+public/
 
 # Misc
-*.pem
-*.key
-
-# Lock files (since you're using npm, keep only package-lock.json)
-# If you ever switch to Yarn or PNPM, remove the other lock files
-yarn.lock
-pnpm-lock.yaml
+Thumbs.db
+desktop.ini
+.DS_Store
