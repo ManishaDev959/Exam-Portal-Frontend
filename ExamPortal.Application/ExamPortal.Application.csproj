@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\ExamPortal.Domain\ExamPortal.Domain.csproj" />
+    <ProjectReference Include="..\ExamPortal.Shared\ExamPortal.Shared.csproj" />
+    <ProjectReference Include="..\ExamPortal.Infrastructure\ExamPortal.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
