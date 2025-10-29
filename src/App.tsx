@@ -12,22 +12,23 @@ export default function App() {
 
   return (
     <Router>
-      {token && <Navbar />} 
+      {<Navbar />} 
 
       <Routes>
+        <Route path="/" element={<Navigate to="/register"/>} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route
           path="/admin"
-          element={token ? <AdminDashboard /> : <Navigate to="/login" />}
+          element={<AdminDashboard />}
         />
         <Route
           path="/dashboard"
-          element={token ? <UserDashboard /> : <Navigate to="/login" />}
+          element={<UserDashboard />}
         />
-        <Route path="*" element={<Navigate to={token ? "/dashboard" : "/login"} />} />
-
           <Route path="/payment/:examFormId" element={<PaymentPage />} />
+
+                <Route path="*" element={<Navigate to="/register"/>} />
       </Routes>
     </Router>
   );

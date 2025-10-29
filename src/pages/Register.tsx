@@ -33,6 +33,8 @@ const Register = () => {
     );
     if (response.status === 200 || response.status === 201) {
       setSuccess("Registration successful!");
+      navigate("/login");
+
     }
   } catch (err: any) {
     setError(err.response?.data?.message || "Registration failed.");
