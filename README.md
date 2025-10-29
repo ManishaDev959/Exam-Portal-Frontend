@@ -36,4 +36,6 @@ http://localhost:5248
 
 // Change the port if needed
 
+API Documentation available at /swagger when backend is running.
+
 
